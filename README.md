@@ -84,8 +84,8 @@ npm install
   ├ <del>node_modules</del> ← npm パッケージマネージャが自動生成するディレクトリ（編集禁止）
   ├ public
   ├ resources
-  │  ├ css
-  │  │  └ app.css
+  │  ├ scss
+  │  │  └ app.scss
   │  ├ js
   │  │  ├ <strong>components</strong> ← Vue.js で画面のコントロールを作成
   │  │  ├ <strong>app.js</strong> ← components に作成したモジュールの読み込み
