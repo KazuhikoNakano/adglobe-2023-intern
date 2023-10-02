@@ -13,7 +13,6 @@ Closes #xx
 ---
 @adg-ShinyaTanaka
 @adglobe-h-omori
-@adglobe-kondo-kazuya
 @kotaro-oka-adglobe-co-jp
-@masaki-shinkawa-adglobe
 @takayuki-miyazaki-adglobe-co-jp
+@KazuhikoNakano 
