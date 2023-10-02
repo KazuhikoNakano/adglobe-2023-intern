@@ -18,7 +18,12 @@ git clone <このリポジトリの URL>
 4. VSCodeのターミナル上で下記のコマンドを実行します。  
 ※実行完了まで数分かかります。  
 ```bash
-docker-compose -f docker-compose.init.yml run --rm composer
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
 ```
 5. 上記のコマンドが完了したら、 VSCode のウィンドウ左下の「><」を押下して  
 ![1-1](https://user-images.githubusercontent.com/105618751/191493624-a6ff6248-491e-4f3f-97a3-372594f66a09.png)  
@@ -84,8 +89,8 @@ npm install
   ├ <del>node_modules</del> ← npm パッケージマネージャが自動生成するディレクトリ（編集禁止）
   ├ public
   ├ resources
-  │  ├ css
-  │  │  └ app.css
+  │  ├ scss
+  │  │  └ app.scss
   │  ├ js
   │  │  ├ <strong>components</strong> ← Vue.js で画面のコントロールを作成
   │  │  ├ <strong>app.js</strong> ← components に作成したモジュールの読み込み
